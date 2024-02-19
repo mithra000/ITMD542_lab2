@@ -1,0 +1,29 @@
+extends layout
+
+block content
+  .container
+    h1.text-center(style="margin-bottom: 20px;") All Contacts
+
+    table(style="width: 100%; margin-top: 20px;")
+      thead
+        tr
+          th(style="text-align: left;") Last Name
+          th(style="text-align: left;") First Name
+          th(style="text-align: left;") Email Address
+          th(style="text-align: left;") Actions
+
+      tbody
+        each contact in contacts
+          tr
+            td(style="text-align: left;") #{contact.lastName}
+            td(style="text-align: left;") #{contact.firstName}
+            td(style="text-align: left;") #{contact.email}
+            td
+              a(href=`/contacts/${contact.id}`, class='btn btn-info mb-2') View
+              a(href=`/contacts/${contact.id}/edit`, class='btn btn-warning mb-2') Edit
+              form(method='POST', action=`/contacts/${contact.id}?_method=DELETE`, style='display: inline;')
+                button(type='submit', class='btn btn-danger mb-2') Delete
+
+    .contact-actions(style="margin-top: 20px; padding: 10px")
+      a(href='/contacts/new', class='btn btn-success mb-2') Add Contact
+      a(href='/', class='btn btn-success mb-2') Home Page

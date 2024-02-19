@@ -1,0 +1,42 @@
+body {
+  padding: 50px;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
+a {
+  color: #00b31e;
+}
+
+.redtext  {
+  color: red;
+}
+
+
+.table {
+  width: 100%;
+  margin-top: 20px;
+}
+
+.btn {
+  margin-right: 10px;
+}
+
+
+.styled-textarea {
+  width: 100%;
+  min-height: 150px;
+  padding: 12px;
+  box-sizing: border-box;
+  border: 1px solid #ced4da;
+  border-radius: 5px;
+  font-family: 'Arial', sans-serif;
+  resize: vertical;
+  background-color: #f8f9fa;
+  color: #495057;
+  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+.styled-textarea:focus {
+  border-color: #007bff;
+  box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+}
